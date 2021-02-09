@@ -7,13 +7,10 @@ import AddTask from './AddTask';
 const Tasks = () => {
   const { docs, isLoading } = useFirestore('tasks');
 
-  if (isLoading) {
-    return <Loading />;
-  }
-
   return (
     <article className='mb-lg'>
       <h2>Tasks</h2>
+      {isLoading && <Loading />}
       <AddTask />
       <div className='tasks'>
         {docs &&

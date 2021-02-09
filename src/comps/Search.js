@@ -4,7 +4,7 @@ import { individualData, activities } from '../data';
 import SearchResults from './SearchResults';
 
 const SearchForm = () => {
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit } = useForm();
   const [data, setData] = useState(null);
 
   const onSubmit = (data, e) => {
@@ -23,7 +23,6 @@ const SearchForm = () => {
         />
 
         <select name='activity' ref={register({ required: true })}>
-          {' '}
           <option value disabled>
             Choose activity type
           </option>

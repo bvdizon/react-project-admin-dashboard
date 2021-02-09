@@ -1,13 +1,13 @@
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 var firebaseConfig = {
-  apiKey: process.env.REACT_APP_APIKEY,
-  authDomain: process.env.REACT_APP_AUTHDOMAIN,
-  databaseURL: process.env.REACT_APP_DATABASEURL,
-  projectId: process.env.REACT_APP_PROJECTID,
-  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
-  appId: process.env.REACT_APP_APPID,
+  apiKey: 'AIzaSyBLtWUut-HyngxMaCFM29gwxiNilZrL81o',
+  authDomain: 'thegroup-report-site.firebaseapp.com',
+  projectId: 'thegroup-report-site',
+  storageBucket: 'thegroup-report-site.appspot.com',
+  messagingSenderId: '1017009916753',
+  appId: '1:1017009916753:web:2c92a01fc092221fc7a170',
 };
 
 // Initialize Firebase

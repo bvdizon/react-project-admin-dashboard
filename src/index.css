@@ -9,8 +9,8 @@ body {
   background: rgb(106, 18, 232);
   background: linear-gradient(
     65deg,
-    rgba(106, 18, 232, 1) 60%,
-    rgba(74, 64, 255, 1) 40%
+    rgba(106, 18, 232, 1) 50%,
+    rgba(74, 64, 255, 1) 50%
   );
   background-repeat: no-repeat;
   background-size: cover;

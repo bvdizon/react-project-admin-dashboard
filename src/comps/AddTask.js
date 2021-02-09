@@ -4,7 +4,7 @@ import { individualData, activities } from '../data';
 import { projectFirestore, timestamp } from '../firebase/config';
 
 const AddTask = () => {
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit } = useForm();
 
   const onSubmit = (data, e) => {
     const newData = { ...data, date: timestamp() };

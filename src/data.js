@@ -9,7 +9,7 @@ const individualData = [
   { id: 7, member: 'Mike Litorco' },
   { id: 8, member: 'Sarah Walczak' },
   { id: 9, member: 'Will Vo' },
-  { id: 10, member: 'Referral member' },
+  { id: 10, member: 'Referral Agent' },
 ];
 
 const activities = [

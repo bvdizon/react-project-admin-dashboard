@@ -3,9 +3,12 @@ import { useForm } from 'react-hook-form';
 import { projectFirestore, timestamp } from '../firebase/config';
 
 const AddTodo = () => {
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit } = useForm();
   const onSubmit = (data, e) => {
-    const newData = { ...data, date: timestamp() };
+    const formattedDate = new Date(data.deadline).toDateString();
+
+    const newData = { ...data, date: timestamp(), deadline: formattedDate };
+
     projectFirestore.collection('todos').add(newData);
     e.target.reset();
   };
