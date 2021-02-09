@@ -1,0 +1,62 @@
+.alert {
+  padding: 20px;
+}
+
+.alert-danger {
+  background-color: #f44336;
+  color: white;
+}
+
+.alert-warning {
+  background-color: #ffaa2c;
+  color: white;
+}
+
+.alert-info {
+  background-color: #46a8f5;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+/* Additional styles */
+.todos {
+  display: grid;
+  grid-gap: 15px;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 600px) {
+  .todos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .todos {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.taskInfo p:nth-child(1) {
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid azure;
+}
+
+.taskInfo p:not(:nth-child(1)) {
+  margin-bottom: 5px;
+}

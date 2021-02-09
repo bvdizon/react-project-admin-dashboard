@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
+:root {
+  --color-theme-d1: #2b04e8;
+  --color-theme-l1: #4a40ff;
+  --color-theme: #5009ff;
+  --color-secondary: #6a12e8;
+  --color-secondary-l1: #6bbd6e;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h1,
+h2 {
+  margin: 10px 0 20px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.app {
+  background-color: azure;
+  padding: 30px 20px;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .app {
+    margin-top: 30px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mb-lg {
+  margin-bottom: 50px;
+}
+
+.tasks {
+  display: grid;
+  grid-gap: 10px;
+  grid-row-gap: 15px;
+}
+
+.task header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+
+  background-color: var(--color-secondary-l1);
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.task main {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 3px solid var(--color-secondary-l1);
+  background-color: whitesmoke;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.task main p {
+  padding: 10px;
+}
+
+.task main p:nth-child(4) {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  .tasks {
+    grid-template-columns: repeat(2, 1fr);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* AddTodo Form */
+.formSearch,
+.formAddTodo,
+.formAddTask {
+  display: grid;
+  grid-gap: 15px;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .formAddTodo {
+    grid-template-columns: repeat(5, 1fr);
   }
+  .formAddTask {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+  .formSearch {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.formSearch > *,
+.formAddTodo > *,
+.formAddTask > * {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid var(--color-secondary-l1);
+  background-color: azure;
+}
+
+.formSearch > *:focus,
+.formSearch > *:hover,
+.formAddTodo > *:focus,
+.formAddTodo > *:hover,
+.formAddTask > *:focus,
+.formAddTask > *:hover {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--color-theme-d1);
+}
+
+.formSearch > input[type='submit'],
+.formAddTodo > input[type='submit'],
+.formAddTask > input[type='submit'] {
+  border: none;
+  background-color: var(--color-secondary);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all ease ease-in-out 0.2s;
+  margin-top: 15px;
+}
+
+.formSearch > input[type='submit']:hover,
+.formAddTodo > input[type='submit']:hover,
+.formAddTask > input[type='submit']:hover {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+}
+
+/* navicons */
+.navicons {
+  display: flex;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.navicons a {
+  font-size: 20px;
+  text-align: center;
+  background-color: var(--color-secondary);
+  color: #fff;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+
+  display: flex;
+}
+
+.navicons a svg {
+  display: inline-block;
+  margin: auto;
+}
+
+/* Search */
+.searchResults thead {
+  background-color: var(--color-theme-l1);
+  color: azure;
 }
