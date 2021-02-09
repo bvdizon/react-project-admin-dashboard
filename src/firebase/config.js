@@ -1,13 +1,13 @@
 import firebase from 'firebase';
 
 var firebaseConfig = {
-  apiKey: 'AIzaSyCMR-h04L3I71W3IOxq7af3r-_uhES-EM8',
-  authDomain: 'the-group---tasks-tracker.firebaseapp.com',
-  databaseURL: 'https://the-group---tasks-tracker.firebaseio.com',
-  projectId: 'the-group---tasks-tracker',
-  storageBucket: 'the-group---tasks-tracker.appspot.com',
-  messagingSenderId: '1013793128046',
-  appId: '1:1013793128046:web:7920ad7ec0bb2a3e2f707f',
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASEURL,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID,
 };
 
 // Initialize Firebase
